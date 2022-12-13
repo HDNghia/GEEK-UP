@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body style="background: rgb(237, 237, 237)">
+    <style>
+        .question:hover {
+            color: blue;
+            background-color: white;
+            cursor: pointer;
+        }
+    </style>
+    <div>
+        <h5 class="ml-3">Section 1 và section 2</h5>
+        <div class="header ml-3">
+            <input type="radio" name="test" onclick="check1()" checked> Câu 1
+            <input type="radio" name="test" onclick="check2()"> Câu 2
+            <input type="radio" name="test" onclick="check3()"> Câu 3
+        </div>
+        <div class="row ml-3 mt-3 mr-3" style="box-shadow: 5px 5px 5px rgb(0,0,0,0.5)">
+            <div class="col-2 p-2 question1 border ">Câu 1</div>
+            <div class="col-2 p-2 question2 border">Câu 2</div>
+            <div class="col-2 p-2 question3 border">Câu 3</div>
+            <div class="bg-white cau1" style="display: block">
+                <h5>Câu 1: Khi truy cập 1 trang web ( VD: https://geekadventure.vn) trình duyệt sẽ làm gì</h5>
+                <div>1. Khi truy cập trang web, trình duyệt sẽ gọi tới máy chủ DNS để biên dịch URL trang web thành một
+                    địa
+                    chỉ
+                    IP,
+                    mỗi
+                    trang web có địa chỉ IP riêng biệt. Khi tìm thấy địa chỉ IP của trang web chúng ta đang vào, địa chỉ
+                    IP
+                    đó
+                    sẽ
+                    được trả về cho trình duyệt.
+                    <br>2. Trình duyệt sẽ sử dụng địa chi IP đó để yêu cầu HTTP gọi tới Server lưu trữ trang web đó. Nó
+                    sẽ
+                    kết
+                    nối
+                    cổng
+                    số
+                    80 trên Server bằng giao thức TCP/IP.
+                    <br>3. Nếu Server chấp nhận thì sẽ gửi lại thông báo "200 OK". Và sau đó trình duyệt sẽ truy xuất mã
+                    HTML
+                    của
+                    trang
+                    web
+                    cụ thể được yêu cầu.
+                    <br>4. Khi trình duyệt của bạn nhận được mã HTML đó từ Server thì nó sẽ hiển thị ra cửa sổ của trình
+                    duyệt
+                    một
+                    trang
+                    web hoàn chỉnh - awesome!
+                    <br>5. Khi chúng ta đóng trình duyệt thì quá trình kết nối với Server sẽ kết thúc.
+                </div>
+            </div>
+            <div class="cau2 bg-white" style="display: none">
+                <h5>Nêu có 2 css styles có selector cùng ứng với 1 element trên cây dom
+                    thì style của element sẽ thể hiện như thế nào</h5>
+                style sẽ nhận css cả 2 vào element đó trên cây dom
+                <div></div>
+            </div>
+            <div class="cau3 bg-white" style="display: none">
+                <h5>
+                    Tại sao javascript có cơ chế xử lý đồng bộ (Asynchoronous)? có những cách
+                    nào để xử lý bất đồng bộ của javascript
+                </h5>
+                <div>
+                    - javascript có cơ thế xử lý đồng bộ vì Giả sử một request
+                    gửi lên server yêu cầu server thực hiện chức năng như import file
+                    hoặc đọc ghi file thì lúc này server sẽ mất nhiều thời gian để xử lý những việc này.
+                    Điều đó cũng đồng nghĩa với việc trong lúc server thực hiện chức năng đó thì sẽ không
+                    thể thực hiện thêm một hành động nào khác. Chưa kể trong lúc server đang thực hiện những
+                    hiện việc đó thì lại có thể có nhiều request được gởi đến trong khi server chưa thực hiện xong,
+                    điều này có thể gây crash server.<br><br>
+                    - Những cách để xử lý đồng bộ trong javascript là:<br>
+                    1. Dùng hàm Callback<br>
+                    2. Sử dụng Promise<br>
+                    3. Dùng async/await (của es6)
+                </div>
+            </div>
+
+        </div>
+        <div class="Section3 mt-3 ml-3">
+            <h5>Section 3</h5>
+            Số task chưa hoàn thành là: <div class="answer1"></div><br>
+            Số task User có id là 5 chưa hoàn thành là: <div class="answer2"></div>
+        </div>
+        <div class="Section4 mt-3 ml-3">
+            <h5>Section 4</h5>
+            - Sau khi chạy đoạn code trên thì student[0].score mang giá trị gì?
+            giải thích tại sao.<br>
+            student[0].score có giá trị là 9.5 vì <br>
+            student.score = Math.min(10, student.score + 0.5); <br>
+            Là tìm giá trị nhỏ hơn 10 là 9 + 0.5 và gắn vào student.score <br>
+            - Độ phức tạp của bài toán
+            Dùng 1 vòng lặp để tìm giá trị nhỏ hơn 10 và gắn vào s2.score => độ phức tạp 0(n)
+            - Viết lại đoạn code trên để arrays studens không bị thay đổi
+            newStudent.sort((s1, s2) => s1.score != s2.score)
+            .forEach((student) => {
+            student.score = Math.min(10, student.score);
+            })
+        </div>
+    </div>
+
+    <script>
+        $(".question1").css("background-color", "white");
+        $(".question1").css("color", "blue");
+
+        function check1() {
+            $(".question1").css("background-color", "white");
+            $(".question1").css("color", "blue");
+            $(".question2").css("color", "black");
+            $(".question3").css("color", "black");
+            $(".question2").css("background-color", "rgb(237, 237, 237)");
+            $(".question3").css("background-color", "rgb(237, 237, 237)");
+            $(".cau1").css("display", "block")
+            $(".cau2").css("display", "none")
+            $(".cau3").css("display", "none")
+        }
+        function check2() {
+            $(".question2").css("background-color", "white");
+            $(".question2").css("color", "blue");
+            $(".question1").css("color", "black");
+            $(".question3").css("color", "black");
+            $(".question1").css("background-color", "rgb(237, 237, 237)");
+            $(".question3").css("background-color", "rgb(237, 237, 237)");
+            $(".cau2").css("display", "block")
+            $(".cau1").css("display", "none")
+            $(".cau3").css("display", "none")
+        }
+        function check3() {
+            $(".question3").css("background-color", "white");
+            $(".question3").css("color", "blue");
+            $(".question1").css("color", "black");
+            $(".question2").css("color", "black");
+            $(".question1").css("background-color", "rgb(237, 237, 237)");
+            $(".question2").css("background-color", "rgb(237, 237, 237)");
+            $(".cau3").css("display", "block")
+            $(".cau2").css("display", "none")
+            $(".cau1").css("display", "none")
+        }
+
+        //Đếm sô task chưa hoàn thành
+        let count = 0;
+        let countUser5 = 0;
+        fetch('http://jsonplaceholder.typicode.com/todos')
+            .then(data => {
+                return data.json()
+            })
+            .then(data => {
+                console.log("check get data: ", data);
+                for (var i = 0; i < data.length; i++) {
+                    // console.log(data[i].completed);
+                    if (data[i].completed == false) {
+                        console.log("check")
+                        count = count + 1;
+                    }
+                    if (data[i].userId == 5 && data[i].completed == false) {
+                        countUser5 = countUser5 + 1;
+                        console.log("check user 5: ", data[i])
+                    }
+                }
+            })
+        setTimeout(countTasks, 800);
+        function countTasks() {
+            console.log("Số lượng tasks chưa hoàn thành là", count)
+            $(".answer1").append(count);
+            $(".answer2").append(countUser5)
+        }
+
+        // secsion 4
+        const students = [
+            {
+                id: 1,
+                name: "Jame",
+                score: 9,
+            },
+            {
+                id: 2,
+                name: "Jack",
+                score: 7,
+            },
+            {
+                id: 3,
+                name: "Davis",
+                score: 7.5,
+            },
+            {
+                id: 4,
+                name: "Erik",
+                score: 10,
+            }
+
+        ];
+        const newStudent = students;
+
+        newStudent.sort((s1, s2) => s1.score != s2.score)
+            .forEach((student) => {
+                student.score = Math.min(10, student.score);
+                console.log(student.score)
+            })
+        console.log("check sort: ", newStudent.sort(1, 2))
+    </script>
+
+</body>
+
+</html>
